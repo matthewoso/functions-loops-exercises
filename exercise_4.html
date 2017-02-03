@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Algorithms Exercise 4</title>
+</head>
+<body>
+	<script>
+		// complete the following three functions below. Note that solving each will help with the next.
+
+		function isInArray(n, arr) {
+			// return true if element n is in arr, false otherwise
+		}
+
+		function getDivisors(n) {
+			// return all of the numbers that n is evenly divisible by
+			// make sure to only include each divisor once
+			// the divisors do not have to be in order
+			// e.g. for 12: [1, 2, 3, 4, 6, 12]
+			return [1, n];
+		}
+
+		function getNumbersWithNDivisors(n, max) {
+			// return an array of all numbers from 1 to max (exclusive) with exactly n divisors
+			return [1];
+		}
+
+
+		// tests (do not modify)
+
+		function arrEq(arrA, arrB) {
+			// shallow equality of array A and array B
+			for (var i = 0; i < arrA.length; i++) {
+				if (arrA[i] !== arrB[i]) { return false; }
+			} return true;
+		}
+
+		console.log ( arrEq(getNumbersWithNDivisors(4, 11), [6, 8, 10]));
+		console.log ( arrEq(getNumbersWithNDivisors(2, 8), [2, 3, 5, 7]));
+
+
+	</script>
+</body>
+</html>
