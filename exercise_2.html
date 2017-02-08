@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Arguments Exercise 2</title>
+</head>
+<body>
+	<script>
+		// Complete the following function which takes an array of strings and returns the longest string in the array
+
+		function getLongestStr(arr) 
+		{
+			for (var i = 0; i < arr.length - 2; i++) 
+				{
+					var length1 = arr[i].length;
+					var length2 = arr[i+1].length;
+					debugger;
+				if (length1 > length2);
+					{
+						debugger;
+						longest = arr[i];
+					}
+					// else // This comes up as a token?!?!!?
+					// 	{
+					// 		longest = arr[i+1];
+					// 	} 
+				}
+			return "longest"; //false??!?  Debugger says I have longest = arr[1] at the end of that loop so wtf
+		}
+
+		// tests (do not modify)
+
+		// test 1
+		console.log(getLongestStr(["hi", "hello", "what"]) === "hello");
+		// test 2
+		var teacher = getLongestStr(["erty", "sarah", "chase"]);
+		console.log(teacher === "sarah" || teacher === "chase");
+		// test 3
+		console.log(getLongestStr([]) === undefined);
+		// test 4
+		console.log(getLongestStr(["", ""]) === "");
+
+
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Algorithms Exercise 3</title>
+</head>
+<body>
+	<script>
+		// Complete the following function to check if all of the types of values in an array are the same.
+		// You may assume that the array is not empty
+		// Hint: typeof(variable) returns the type of the data in `variable` as a string
+		// e.g. typeof("hi") === "string"; typeof(3) === "number";
+
+		function allSameType(arr) {
+			return false;
+		}
+
+		// tests (do not modify)
+
+		console.log (allSameType([1,2,3]) === true);
+		console.log (allSameType([1, "2", 3]) === false);
+		console.log (allSameType(["A", "bbbb", (34).toString()]) === true);
+		console.log (allSameType([function(a){ return a * a; }, function(b) { return b + b; }]) === true);
+		console.log (allSameType([undefined, NaN, 0, null]) === false);
+
+	</script>
+</body>
+</html>

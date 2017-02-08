@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Functions</title>
+</head>
+<body>
+	<script>
+	// f(x) = x * x
+
+	function square(x) {
+		return x * x;
+	}
+
+	var result = square(30);
+	console.log(result);
+
+	Math.random()
+
+	// same thing, different names
+
+	// function abc(def) {
+	// 	return def * def;
+	// }
+
+	function absolute(num) {
+		if (num >= 0) {
+			return num;
+		}
+		return num * -1;
+	}
+
+	// When we return from a function,
+	// we stop running that function
+
+	console.log( absolute(-4) );
+
+	function subtract(a, b) {
+		return a - b;
+	}
+
+	console.log ( subtract(5, 3) ); // 2
+	console.log ( subtract(3, 5) ); // -2
+
+	function add(a, b) {
+		return a + b;
+	}
+
+	var first = 3;
+	var second = 5;
+	console.log( add(first, second) );
+	console.log( add(3, 5 + 2) );
+
+	debugger;
+	var arr = [3, 20, 43, 12, 34];
+
+	function getIndex(array, target) {
+		for (var i = 0; i < array.length; i++) {
+			if (array[i] === target) {
+				return i;
+			}
+		}
+		return -1;
+	}
+
+	getIndex(arr, 12);
+
+	function sumArr(array) {
+		var sum = 0;
+		for (var i = 0; i < array.length; i++) {
+			sum = sum + array[i];
+		}
+		return sum;
+	}
+
+	sumArr([3, 20, 43, 12, 34]);
+	sumArr([1, 2, 3, 4, 5]);
+	sumArr(arr); // array is arr
+
+
+	</script>
+</body>
+</html>
