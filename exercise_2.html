@@ -8,24 +8,20 @@
 	<script>
 		// Complete the following function which takes an array of strings and returns the longest string in the array
 
+		
+
 		function getLongestStr(arr) 
 		{
-			for (var i = 0; i < arr.length - 2; i++) 
+			var longest = arr[0]
+
+			for (var i = 0; i < arr.length; i++) 
 				{
-					var length1 = arr[i].length;
-					var length2 = arr[i+1].length;
-					debugger;
-				if (length1 > length2);
-					{
-						debugger;
-						longest = arr[i];
-					}
-					// else // This comes up as a token?!?!!?
-					// 	{
-					// 		longest = arr[i+1];
-					// 	} 
+					if (arr[i].length>longest.length)
+						{
+							longest=arr[i];
+						}
 				}
-			return "longest"; //false??!?  Debugger says I have longest = arr[1] at the end of that loop so wtf
+			return longest
 		}
 
 		// tests (do not modify)

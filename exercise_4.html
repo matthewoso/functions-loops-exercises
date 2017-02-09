@@ -8,22 +8,61 @@
 	<script>
 		// complete the following three functions below. Note that solving each will help with the next.
 
-		function isInArray(n, arr) {
-			// return true if element n is in arr, false otherwise
-		}
+		// var n = 12
+		// var arr = [1,2,3,4,12,6]
 
-		function getDivisors(n) {
+		function isInArray(n, arr) 
+			{
+			for (var i = 0; i < arr.length; i++) 
+				{
+					if (arr[i] === n)
+					{
+						return true
+					}
+					
+				}
+				return false
+			// return true if element n is in arr, false otherwise
+			}
+		console.log(isInArray(12, [1,2,3,4,12,6]));
+
+
+
 			// return all of the numbers that n is evenly divisible by
 			// make sure to only include each divisor once
 			// the divisors do not have to be in order
 			// e.g. for 12: [1, 2, 3, 4, 6, 12]
-			return [1, n];
-		}
+		function getDivisors(n) 
+			{
+				var divisors = []
+				for (var i = 2; i < n; i++) 
+				{
+					if (n % i !== 0)
+					{
+						divisors.push[i];
+					}
+				}
 
-		function getNumbersWithNDivisors(n, max) {
+			return [1, divisors, n];
+			}
+
+
 			// return an array of all numbers from 1 to max (exclusive) with exactly n divisors
-			return [1];
-		}
+		function getNumbersWithNDivisors(n, max) 
+			{
+				DivArr = getDivisors(max)
+				CorrrectNumDiv = []
+
+				for (var i = 0; i < max.length; i++) 
+
+					{
+						if (DivArr[i].length === n)
+						{
+							CorrectNumDiv.push(DivArr[i]);
+						}
+					}
+			return [1,CorrectNumDiv];
+			}
 
 
 		// tests (do not modify)

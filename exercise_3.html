@@ -11,16 +11,36 @@
 		// Hint: typeof(variable) returns the type of the data in `variable` as a string
 		// e.g. typeof("hi") === "string"; typeof(3) === "number";
 
-		function allSameType(arr) {
-			return false;
-		}
+		function allSameType(arr) 
+			{
+				for (var i = 0; i < arr.length; i++) 
+					{
+						var first = typeof(arr[i]);
+						// console.log(first);
+					
+						for (var j = 0; j < arr.length; j++) 
+						
+							{
+								debugger;
+								if (typeof(arr[j]) !== first) 
+									{
+										return false;
+									}
+							}
+							return true
+					}
+			}
 
 		// tests (do not modify)
 
 		console.log (allSameType([1,2,3]) === true);
+
 		console.log (allSameType([1, "2", 3]) === false);
+
 		console.log (allSameType(["A", "bbbb", (34).toString()]) === true);
+
 		console.log (allSameType([function(a){ return a * a; }, function(b) { return b + b; }]) === true);
+
 		console.log (allSameType([undefined, NaN, 0, null]) === false);
 
 	</script>

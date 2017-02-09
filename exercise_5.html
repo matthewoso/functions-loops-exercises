@@ -12,6 +12,51 @@
 
 		// Write your own tests and functions to complete this task
 
+
+// Complete the following function which takes an array of strings and returns the longest string in the array
+
+		
+
+		function getLongestStr(arr) 
+			{
+				var longest = arr[0];
+
+				for (var i = 0; i < arr.length; i++) 
+					{
+						if (arr[i].length>longest.length)
+							{
+								longest=arr[i];
+							}	
+					}
+				return longest.length;
+			}
+
+		function getStrings(arr)
+			{
+				var strings = [];
+
+				for (var i = 0; i < arr.length; i++) 
+					{
+						if (arr[i].length === getLongestStr(arr))
+						{
+								strings.push(arr[i]);
+						}
+					}
+				return strings
+			}
+
+		// test 1
+		var a = getStrings(["hi", "hello", "what"]);
+		console.log(a);
+		console.log(a == "hello");//why does soft but not hard equivalence work?
+
+		// test 2
+		var b = getStrings(["erty", "sarah", "chase"]);
+		console.log(b);		
+		console.log(b == ["sarah", "chase"]);//Why does this come back false?
+
+
 	</script>
+
 </body>
 </html>
